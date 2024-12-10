@@ -196,6 +196,35 @@ function sample(){
     // let no2=parseInt(document.getElementById("no2").value)
     // let h2=document.getElementById("display")
     // h2.innerHTML=no1+no2
+
+    // conditional statements
+    // ..............................
+    // 1) if else
+
+    // let no1=parseInt(document.getElementById("no1").value) 
+    // let no2=parseInt(document.getElementById("no2").value)
+    // let h2=document.getElementById("display")
+    // if(no1==no2){
+    //     h2.innerHTML='equal'
+    // }
+    // else{
+    //     h2.innerHTML='Not Equal'
+    // }
+
+    // 2)  elseif
+
+    // let no1=parseInt(document.getElementById("no1").value) 
+    // let no2=parseInt(document.getElementById("no2").value)
+    // let h2=document.getElementById("display")
+    // if(no1==no2){
+    //     h2.innerHTML='equal'
+    // }
+    // else if(no1!=no2){
+    //     h2.innerHTML='Not Equal'
+    // }
+    
+
+    
 }
 
 function add(){
@@ -231,6 +260,36 @@ function mod(){
     let h2=document.getElementById("display")
     h2.innerHTML=no1%no2
 }
+
+// conditional stmt tasks
+// ..........................
+
+// 1) 
+
+function bonus(){
+    let salary=parseInt(document.getElementById("salary").value) 
+    let year=parseInt(document.getElementById("year").value)
+    let h2=document.getElementById("display")
+    if(year>=5){
+        h2.innerHTML=salary*0.05+salary
+    }
+    else{
+        h2.innerHTML='no bonus'
+    }
+}
+
+// 2)
+// let num=parseInt(document.getElementById("num").value) 
+// let h2=document.getElementById("display")
+// function divisible3(){
+//     if(num%3==0){
+//         h2.innerHTML='is divisible'
+//     }
+//     else{
+//         h2.innerHTML='is not divisible'
+//     }
+// }
+
 
 
 
