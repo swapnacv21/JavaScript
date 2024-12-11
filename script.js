@@ -222,9 +222,33 @@ function sample(){
     // else if(no1!=no2){
     //     h2.innerHTML='Not Equal'
     // }
-    
 
-    
+    // forloop
+    // ...................
+
+    // let i=1
+    // for(let i=1;i<=10;i++){
+    //     console.log(i);
+    // }
+
+    // while loop
+    // ............
+
+    // let i=1
+    // while (i<=10){
+    //     console.log(i);
+    //     i++
+    // }
+
+    // do while
+    // ...............
+
+    let i=1
+    do{
+        console.log(i);
+        i++
+    }
+    while(i<=10)
 }
 
 function add(){
@@ -289,6 +313,47 @@ function bonus(){
 //         h2.innerHTML='is not divisible'
 //     }
 // }
+
+// 3) 
+
+
+// odd and even no
+// ..................................
+
+function odd(){
+    let num1=parseInt(document.getElementById("num1").value)
+    let num2=parseInt(document.getElementById("num2").value)
+    let h2=document.getElementById("display")
+    let i=num1
+    
+    for(let i=num1;i<=num2;i++){
+        if (i%2!=0){
+            console.log(i);
+        }
+    }
+}
+function even(){
+    let num1=parseInt(document.getElementById("num1").value)
+    let num2=parseInt(document.getElementById("num2").value)
+    let h2=document.getElementById("display")
+    let i=num1
+    
+    for(let i=num1;i<=num2;i++){
+        if (i%2==0){
+            console.log(i);
+        }
+    }
+}
+
+function multtable(){
+    let num=parseInt(document.getElementById("num").value)
+    a=1
+    for(let i=a;i<=10;i++){
+        console.log(a,'*',num,'=',a*num)
+        a+=1
+    }
+}
+
 
 
 
