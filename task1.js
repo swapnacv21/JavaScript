@@ -18,8 +18,9 @@ function Display(){
         tr.appendChild(age_td)
 
         tbody.appendChild(tr)
-
-
     });
 }
 Display()
+
+
+

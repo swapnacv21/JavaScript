@@ -223,6 +223,11 @@ function sample(){
     //     h2.innerHTML='Not Equal'
     // }
 
+    // conditional statements tasks
+    // ..........................................
+    
+
+
     // forloop
     // ...................
 
