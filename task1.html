@@ -5,19 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table,th,td{
-    border: 1px solid black;
-}
-table,td{
-    width: 30%;
-    margin-top: 2%;
-    /* margin-left: 15%; */
-    text-align: center;
-}
+        #edit_form{
+            display:none;
+        }
     </style>
 </head>
 <body>
-    <table class="table table-bordered">
+    <table>
         <thead>
             <tr>
                 <th>Id</th>
@@ -35,6 +29,21 @@ table,td{
 
         </tbody>
     </table>
+
+    <form id="add_form">
+        <input type="text" name="" id="id" placeholder="Enter id">
+        <input type="text" name="" id="name" placeholder="Enter name">
+        <input type="number" name="" id="age" placeholder="Enter age">
+        <input type="submit" value="Add">
+    </form>
+
+    <form id="edit_form">
+        <input type="text" name="" id="e_id" placeholder="Enter id">
+        <input type="text" name="" id="e_name" placeholder="Enter name">
+        <input type="number" name="" id="e_age" placeholder="Enter age">
+        <input type="submit" value="Update">
+    </form>
+
     <script src="task1.js"></script>
 </body>
 </html>
