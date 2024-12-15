@@ -26,15 +26,7 @@ function Display(){
         phone_td.innerHTML=user.phone
         tr.appendChild(phone_td)
 
-        // let edit_td = document.createElement("td")
-        // let edit_btn = document.createElement("button")
-        // edit_btn.innerHTML='edit'
-        // edit_btn.onclick=function(){
-        //     edit_form(user.id)
-        // }
-        // edit_td.appendChild(edit_btn)
-        // tr.appendChild(edit_td)
-
+        
         let edit_td = document.createElement("td")
         let edit_btn = document.createElement("button")
         edit_btn.innerHTML='edit'
@@ -44,24 +36,24 @@ function Display(){
         edit_td.appendChild(edit_btn)
         tr.appendChild(edit_td)
 
+
+        let delete_td = document.createElement("td")
+        let delete_btn = document.createElement("button")
+        delete_btn.innerHTML='delete'
+        delete_btn.onclick=function(){
+            delete_data(user.id)
+        }
+        delete_td.appendChild(delete_btn)
+        tr.appendChild(delete_td)
+
         tbody.appendChild(tr)
     })
 }
 
-
-// let edit_data
-// function edit_form(id){
-//     document.getElementById("edit_form").style.display='block'
-//     document.getElementById("add_form").style.display='none'
-
-//     let edit = data.find((user)=>user.id==id)
-//     document.getElementById("e_id").value=edit.id
-//     document.getElementById("e_name").value=edit.name
-//     document.getElementById("e_age").value=edit.age
-//     document.getElementById("e_position").value=edit.position
-//     document.getElementById("e_phone").value=edit.phone
-//     edit_data = id
-// }
+function delete_data(id){
+    data = data.filter((user)=>user.id!=id)
+    Display()
+}
 
 
 let edit_data
@@ -96,30 +88,6 @@ document.getElementById("edit_form").addEventListener('submit',function(event){
     document.getElementById("add_form").style.display='block'
     Display()
 })
-
-
-
-
-
-
-// document.getElementById("edit_form").addEventListener("submit",function(event){
-//     event.preventDefault()
-//     let id = document.getElementById("e_id").value
-//     let name = document.getElementById("e_name").value
-//     let age = document.getElementById("e_age").value
-//     let position = document.getElementById("e_position").value
-//     let phone = document.getElementById("e_phone").value
-
-//     data = data.map((user)=>{
-//         if(user.id==edit_data){
-//             return{...user,id:id,name:name,age:age,position:position,phone:phone}
-//         }
-//         return user
-//     })
-//     document.getElementById("edit_foem").style.display='none'
-//     document.getElementById("add_form").style.display='block'
-//     Display()
-// })
 
 
 
