@@ -84,14 +84,14 @@
 // ............................................
 
 
-let pswd = document.getElementById("pswd")
-let cap = document.getElementById("cap")
-let len = document.getElementById("len")
-let sm = document.getElementById("sm")
-let no = document.getElementById("no")
-let spl = document.getElementById("spl")
-pswd.addEventListener('input',function(){
-    let password = pswd.value
+// let pswd = document.getElementById("pswd")
+// let cap = document.getElementById("cap")
+// let len = document.getElementById("len")
+// let sm = document.getElementById("sm")
+// let no = document.getElementById("no")
+// let spl = document.getElementById("spl")
+// pswd.addEventListener('input',function(){
+//     let password = pswd.value
     // method 1:
     // ...............................
     // if(password.length>=8){
@@ -105,29 +105,134 @@ pswd.addEventListener('input',function(){
     // method 2:
     // .............................
 
-    len.style.color = password.length>=8 ? 'green' : 'red'
-    cap.style.color=/[A-Z]/.test(password) ? 'green' : 'red'
-    sm.style.color=/[a-z]/.test(password) ? 'green' : 'red'
-    no.style.color=/\d/.test(password) ? 'green' : 'red'
-    spl.style.color=/[!@#$%*]/.test(password) ? 'green' : 'red'
-})
+//     len.style.color = password.length>=8 ? 'green' : 'red'
+//     cap.style.color=/[A-Z]/.test(password) ? 'green' : 'red'
+//     sm.style.color=/[a-z]/.test(password) ? 'green' : 'red'
+//     no.style.color=/\d/.test(password) ? 'green' : 'red'
+//     spl.style.color=/[!@#$%*]/.test(password) ? 'green' : 'red'
+// })
 
-document.getElementById("form").addEventListener("submit",function(event){
-    event.preventDefault()
-    let password = document.getElementById("pswd").value
+// document.getElementById("form").addEventListener("submit",function(event){
+//     event.preventDefault()
+//     let password = document.getElementById("pswd").value
 
-    if (password.length>=8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /\d/.test(password) && /[!@#$%*]/.test(password)){
-        alert('Valid')
-    }
-    else{
-        alert("Invalid")
-    }
+//     if (password.length>=8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /\d/.test(password) && /[!@#$%*]/.test(password)){
+//         alert('Valid')
+//     }
+//     else{
+//         alert("Invalid")
+//     }
 
-})
+// })
+
+// email validation
+// .............................
+
+// document.getElementById("form").addEventListener("submit",function(event){
+//     event.preventDefault()
+//     let email = document.getElementById("email").value
+//     if (/[a-z]/.test(email) && /['@gmail.com']/.test(email) && /\d/.test(email)){
+//         alert('Valid')
+//     }
+//     else{
+//         alert('Invalid')
+//     }
+// })
+
+
+// EXCEPTION HANDLING
+//........................................
+
+// try{
+//     console.log(a);
+// }
+// catch(error){
+//     console.log('error',error.message);
+// }
+// finally{
+//     console.log("pgm ends");
+    
+// }
 
 
 
+// call back example:
+// ...............................
 
+// function Demo(callback){
+//     console.log('Demo fun');
+    // callback()  //sample()
+// }
+// function Sample(){
+//     console.log('Sample fun');
+// }
+// Demo(Sample)
+
+// output: 
+// Demo fun
+// Sample fun
+
+// call back hell example :
+// .................................
+
+// function Demo(callback){
+//     console.log('Demo Fun');
+//     callback(Sample1)  //sample
+// }
+// function Sample(callback){
+//     console.log('Sample fun');
+//     callback()  //sample1
+// }
+// function Sample1(callback){
+//     console.log('Sample1 fun');
+// }
+// Demo(Sample)
+
+// output:
+// Demo Fun
+// Sample fun
+// Sample1 fun
+
+
+// Promise
+// ...................
+
+
+// const data = new Promise((resolve,reject)=>{
+//     if(10==10){
+//         resolve("Eql")
+//     }
+//     else{
+//         reject("Not")
+//     }
+// })
+// data.then(result=>console.log(result)).catch(error=>console.log(error)).finally(()=>console.log("prgm ends"))
+
+// async,await
+// .......................
+
+
+// async function demo(){
+//     const data = new Promise((resolve,reject)=>{
+//         setTimeout(()=>resolve("data available"),2000) //----------->resolve
+//     })
+//     const result = await data
+//     console.log(result);
+// }
+// demo()
+
+// output: data available
+
+// async function demo(){
+//     const data = new Promise((resolve,reject)=>{
+//         setTimeout(()=>reject("data not available"),2000) //------------>reject
+//     })
+//     const result = await data
+//     console.log(result);
+// }
+// demo()
+
+// output: data not available
 
 
 
