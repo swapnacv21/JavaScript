@@ -68,4 +68,7 @@ const fetchdata = async()=>{
         console.log(error);
     }
 }
+
 fetchdata()
+
+
